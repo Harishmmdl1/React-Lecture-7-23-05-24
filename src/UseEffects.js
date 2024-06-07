@@ -16,6 +16,7 @@ const UseEffects = () => {
 //       .then(response => response.json())
 //       .then(data => console.log(data));
 //   }, []);
+
   useEffect(() => {
     const timer = setInterval(() => {
       console.log('Tick');
@@ -25,6 +26,7 @@ const UseEffects = () => {
       clearInterval(timer);
     };
   }, []);
+
   useEffect(() => {
     const handleResize = () => {
       console.log('Window resized');
@@ -35,6 +37,7 @@ const UseEffects = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  
   return (
     <div>
       <h1>UseEffects</h1>
